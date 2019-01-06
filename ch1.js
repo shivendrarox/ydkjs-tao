@@ -15,4 +15,13 @@ identify.call( me ); // KYLE
 identify.call( you ); // READER
  speak.call( me ); // Hello, I'm KYLE
 speak.call( you ); // Hello, I'm READER
-////////////
+//The above code can also be written as
+function identify(context){
+return context.name.toUpperCase();
+}
+function speak(context){
+ var greeting = "Hello i am" +identify(context);
+console.log(greeting);
+}
+identify(you);
+speak(me);
